@@ -1,94 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Unreal Projections</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unreal Projections – Holiday Projection Facades</title>
+
+    <style>
+        /* ---------- GLOBAL RESET ---------- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0d0d0f;
+            color: #f0f0f0;
+            scroll-behavior: smooth;
+            line-height: 1.6;
+        }
+
+        /* ---------- HEADER ---------- */
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            background: rgba(10, 10, 12, 0.9);
+            backdrop-filter: blur(8px);
+            z-index: 999;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1b1b22;
+        }
+
+        header h1 {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: #42aaff;
+        }
+
+        nav a {
+            margin-left: 25px;
+            color: #e6e6e6;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        nav a:hover {
+            color: #42aaff;
+        }
+
+        /* ---------- SECTION CONTAINERS ---------- */
+        section {
+            padding: 120px 8% 90px 8%;
+        }
+
+        .hero {
+            padding-top: 150px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.6rem;
+            margin-bottom: 20px;
+            color: #42aaff;
+            text-shadow: 0 0 20px rgba(66,170,255,0.4);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 35px auto;
+            opacity: 0.85;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 26px;
+            background: #42aaff;
+            color: #000;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.25s;
+        }
+        .button:hover {
+            background: #70c3ff;
+        }
+
+        /* ---------- HEADERS ---------- */
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: #42aaff;
+        }
+
+        /* ---------- FACADES GRID ---------- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            padding: 20px;
+            background: #15151a;
+            border-radius: 10px;
+            border: 1px solid #22222b;
+            transition: 0.3s;
+        }
+        .card:hover {
+            border-color: #42aaff;
+            box-shadow: 0 0 12px rgba(66,170,255,0.25);
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #42aaff;
+        }
+
+        /* ---------- CONTACT ---------- */
+        .contact p {
+            margin-bottom: 14px;
+        }
+
+        /* ---------- MOBILE ---------- */
+        @media (max-width: 768px) {
+            nav a {
+                margin-left: 12px;
+                font-size: 0.85rem;
+            }
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
+
+<!-- ---------- HEADER ---------- -->
 <header>
-    <div class="logo" style="font-size:26px; font-weight:800;">Unreal Projections</div>
+    <h1>Unreal Projections</h1>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="facades.html">Facade Packs</a>
-        <a href="lumalux.html">LumaLux Tool</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="contact.html">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#facades">Facade Packs</a>
+        <a href="https://www.lumaluxapp.com" target="_blank">LumaLux App</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<div class="hero">
-    <h1>Transform Your Home Into a Stunning Projection Show</h1>
-    <p>Custom-crafted holiday facade videos, matched to your exact house outline.</p>
-    <a class="btn" href="facades.html">🎄 Shop Facade Packs</a><br><br>
-    <a href="lumalux.html">or get the LumaLux tool only →</a>
-</div>
+<!-- ---------- HERO SECTION ---------- -->
+<section id="home" class="hero">
+    <h2>Transform Your Home Into a Stunning Projection Show</h2>
+    <p>
+        Custom-crafted holiday facade videos, perfectly matched to your home's outline.  
+        No complexity — just choose a pack, send your outline, and receive a studio-quality projection show.
+    </p>
 
-<section>
-    <h2 class="center">Two Ways to Create Your Show</h2>
+    <a href="#facades" class="button">Browse Facade Packs</a>
+</section>
+
+<!-- ---------- HOW IT WORKS ---------- -->
+<section id="how-it-works">
+    <h3 class="section-title">How It Works</h3>
+    <p>
+        1. Purchase any facade pack below.<br>
+        2. You'll receive temporary access to the LumaLux app to outline your home.<br>
+        3. Send us the exported outline.<br>
+        4. We custom-generate your holiday facade video and deliver it to you.<br><br>
+        It’s projection mapping made simple — no software learning curve required.
+    </p>
+</section>
+
+<!-- ---------- FACADE PACKS ---------- -->
+<section id="facades">
+    <h3 class="section-title">Available Facade Packs</h3>
 
     <div class="grid">
+
+        <!-- Example pack -->
         <div class="card">
-            <h3>Purchase Facade Packs</h3>
-            <p>Seasonal bundles including Christmas & Halloween. Includes free 1-month access to LumaLux.</p>
-            <a class="btn" href="facades.html">Shop Packs</a>
+            <h4 class="card-title">Christmas Facade Pack – 5 Designs</h4>
+            <p>Includes 1 month of LumaLux access to outline your home.</p>
+            <br>
+            <a class="button" href="facade-christmas.html">View Pack</a>
         </div>
 
         <div class="card">
-            <h3>LumaLux Tool Only</h3>
-            <p>Create your own outlines and shows. Perfect for creators and custom projection builds.</p>
-            <a class="btn" href="lumalux.html">Learn More</a>
+            <h4 class="card-title">Christmas Facade Pack – 10 Designs</h4>
+            <p>Perfect for creating a full-rotation holiday show.</p>
+            <br>
+            <a class="button" href="facade-christmas.html">View Pack</a>
         </div>
+
+        <div class="card">
+            <h4 class="card-title">Christmas Facade Pack – 20 Designs</h4>
+            <p>Maximum variety. Build a huge playlist for December.</p>
+            <br>
+            <a class="button" href="facade-christmas.html">View Pack</a>
+        </div>
+
+        <!-- Add seasonal packs later -->
     </div>
 </section>
 
-<section>
-    <h2 class="center">Featured Holiday Packs</h2>
-
-    <div class="grid">
-        <div class="card">
-            <h3>Christmas 5-Pack</h3>
-            <p>5 animated facades • Free LL access</p>
-            <a class="btn" href="facade-christmas.html">View Pack</a>
-        </div>
-
-        <div class="card">
-            <h3>Christmas 10-Pack</h3>
-            <p>10 animated facades • Free LL access</p>
-            <a class="btn" href="facade-christmas.html">View Pack</a>
-        </div>
-
-        <div class="card">
-            <h3>Christmas 20-Pack</h3>
-            <p>20 animated facades • Free LL access</p>
-            <a class="btn" href="facade-christmas.html">View Pack</a>
-        </div>
-    </div>
+<!-- ---------- CONTACT SECTION ---------- -->
+<section id="contact" class="contact">
+    <h3 class="section-title">Contact</h3>
+    <p>Email: unrealprojections@gmail.com</p>
+    <p>We typically respond within 24 hours.</p>
 </section>
 
-<section>
-    <h2 class="center">How It Works</h2>
-
-    <div class="grid">
-        <div class="card">
-            <h3>1. Choose Your Pack</h3>
-            <p>Select a seasonal bundle with 5–20 facades.</p>
-        </div>
-
-        <div class="card">
-            <h3>2. Map Your House (Free)</h3>
-            <p>We include a month of LumaLux access with every pack.</p>
-        </div>
-
-        <div class="card">
-            <h3>3. Receive Your Custom Video</h3>
-            <p>We generate a pixel-perfect facade video matched to your outline.</p>
-        </div>
-    </div>
-</section>
-
-<footer>
-    © 2025 Unreal Projections. All Rights Reserved.
-</footer>
 </body>
 </html>
