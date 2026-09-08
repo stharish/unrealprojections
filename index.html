@@ -20,6 +20,9 @@
             --card-bg: rgba(20, 20, 30, 0.6);
             --text: #e8e8f0;
             --text-muted: #a0a0b8;
+            --brand-champagne: #f3e6d0;
+            --brand-gold: #d9b77a;
+            --brand-gold-dark: #a9824e;
         }
 
         body {
@@ -60,7 +63,7 @@
             padding: 14px 6%;
             background: rgba(10, 10, 15, 0.7);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(217, 183, 122, 0.14);
             z-index: 1000;
             transition: all 0.3s ease;
         }
@@ -106,7 +109,7 @@
         }
 
         nav a {
-            color: var(--text);
+            color: var(--brand-champagne);
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 500;
@@ -121,12 +124,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            background: linear-gradient(90deg, var(--brand-gold-dark), var(--brand-gold), var(--brand-champagne));
             transition: width 0.3s ease;
         }
 
         nav a:hover {
-            color: var(--primary);
+            color: var(--brand-gold);
         }
 
         nav a:hover::after {
@@ -143,7 +146,7 @@
         .mobile-toggle span {
             width: 25px;
             height: 2px;
-            background: var(--text);
+            background: var(--brand-champagne);
             transition: 0.3s;
         }
 
@@ -445,7 +448,7 @@
                 flex-direction: column;
                 padding: 30px;
                 gap: 20px;
-                border-top: 1px solid rgba(255, 255, 255, 0.05);
+                border-top: 1px solid rgba(217, 183, 122, 0.14);
             }
 
             nav.active {
