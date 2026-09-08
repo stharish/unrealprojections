@@ -46,6 +46,14 @@ header nav a {
 section { max-width: 1200px; margin: 60px auto; padding: 0 40px; }
 .center { text-align: center; }
 
+.contact-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 /* GRID */
 .grid {
     display: grid;
@@ -69,4 +77,15 @@ footer {
     color: #777;
     background: #050505;
     margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+    .contact-line {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .contact-separator {
+        display: none;
+    }
 }
