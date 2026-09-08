@@ -1,4 +1,10 @@
 /* GLOBAL */
+:root {
+    --brand-champagne: #f3e6d0;
+    --brand-gold: #d9b77a;
+    --brand-gold-dark: #a9824e;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -16,7 +22,7 @@ header {
     align-items: center;
     padding: 12px 40px;
     background: #0f0f0f;
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid rgba(217, 183, 122, 0.14);
 }
 
 .logo {
@@ -33,12 +39,38 @@ header {
     display: block;
     object-fit: cover;
     object-position: center;
+    transition: filter 0.3s ease;
+}
+
+.logo:hover img {
+    filter: brightness(1.08);
 }
 
 header nav a {
     margin-left: 20px;
     font-weight: bold;
-    color: white;
+    color: var(--brand-champagne);
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--brand-gold-dark), var(--brand-gold), var(--brand-champagne));
+    transition: width 0.25s ease;
+}
+
+header nav a:hover {
+    color: var(--brand-gold);
+}
+
+header nav a:hover::after {
+    width: 100%;
 }
 
 /* HERO */
